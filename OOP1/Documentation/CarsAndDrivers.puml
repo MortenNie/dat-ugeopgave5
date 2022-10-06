@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+Class Car
+Class Driver
+Class Main
+
+Main : - Driver driver;
+Main : - Car car;
+Main : - Car car2;
+
+Car : - String make;
+Car : - String model;
+Car : -  int year;
+Car : - String bodyStyle;
+Car : -  Driver driver;
+
+Car : + getDriver();
+Car : + void setDriver(Driver driver);
+Car : + String toString()
+
+Driver : - String name;
+Driver : - int age;
+Driver : + String toString()
+
+
+Main *--Car
+Car *-- Driver
+@enduml
